@@ -110,17 +110,34 @@ sub handle_ligne
     #  m14
     if ( $attr->{src} =~ m/\/picts\/moteur\/ligne\/(((b|m)\d\d)|p_(rer_\D)|tram_(t\d))/ )
     {
-        if ($2) { 
-            $ligne = $2;
+        if ($2) {
+            if ($ligne){
+                $ligne = "$2,$ligne";
+            }
+            else{
+                $ligne = $2 ;
+            }
+
         }
         elsif ($4){
-          $ligne = $4;
+            if ($ligne){
+                $ligne = "$4,$ligne";
+            }
+            else{
+                $ligne =$4;
+            }
         }
         elsif ($5){
-            $ligne = $5;
+            if ($ligne){
+                $ligne = "$5,$ligne";
+            }
+            else{
+                $ligne=$5
+            }
+            #print "$ligne: $attr->{src} \n";
+            print "ligne: $ligne\n";
         }
-        #print "$ligne: $attr->{src} \n";
-    } 
+    }
 }
 
 # internal function for getting metro/bus number line .
