@@ -76,7 +76,7 @@ else {
 if ( $PROFILE_MODE eq "SAGEM")
 {
     $DEPART = "40+Rue+d%27+Alesia+PARIS-14EME";
-    $TYPE_DEPART = "RUE";
+    $TYPE_DEPART = "RUE"; 
 
     $ARRIVEE = "Saint-Cloud";
     $TYPE_ARRIVEE = "ARRET";
@@ -85,6 +85,7 @@ if ( $PROFILE_MODE eq "SAGEM")
     $Minute = "10";
     $TypeDate = "DATE_ARRIVEE";
 }
+
 
 #my $REQUEST = "Depart%5BType%5D=RUE&Depart%5BSaisie%5D=14+Rue+Gaillon+PARIS-02EME&listePersoDepart=0&Arrivee%5BType%5D=RUE&Arrivee%5BSaisie%5D=40+Rue+d%27+Alesia+PARIS-14EME&listePersoArrivee=0&ModeTransport%5BModeTransportSelectionne%5D=TOUS_MODE&ModeTransport%5BCritereSelectionne%5D=PLUS_RAPIDE&Date%5BJourSelectionne%5D=8&Date%5BMoisSelectionne%5D=9&Date%5BAnneeSelectionne%5D=2009&Date%5BTypeDateSelectionne%5D=DATE_DEPART&Date%5BHeureSelectionne%5D=13&Date%5BMinuteSelectionne%5D=45" ;
 
