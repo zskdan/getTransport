@@ -2,7 +2,9 @@
 # a perl script interface to ratp.fr
 # for getting transport time/lines in paris.
 # zakaria.elqotbi zelqotbi@gmail.com
-# TODO : errors management. 
+# TODO
+#      : Porfiles
+#      : errors management. 
 #      : support of stations search 
 #      : adresse/stations as arguments
 #
@@ -14,6 +16,7 @@ push @INC,"/home/zakaria/bin";
 use strict;
 use MyParser;
 
+# RATP Constants :
 my $initURL = "http://www33.ratp.info/Pivi/piviweb.php?exec=piviweb&cmd=NouvelleRecherche&Profil=RATP";
 my $requestURL = "http://www33.ratp.info/Pivi/piviweb.php?exec=piviweb&cmd=Lexico&Profil=RATP";
 my $resultURL = "http://www33.ratp.info/Pivi/piviweb.php?exec=piviweb&cmd=FeuilleDeRoute&Profil=RATP";
@@ -22,6 +25,7 @@ my $DEPART = "14+Rue+Gaillon+PARIS-02EME";
 
 # test of RER
 #my $ARRIVEE = "Impasse+de+la+Chapelle+MONTLHERY";
+
 # test of metro/bus
 my $ARRIVEE = "40+Rue+d%27+Alesia+PARIS-14EME";
 # test of Tramway
@@ -52,6 +56,8 @@ if ( $numArgs < 1 )
     $Heure = $timeData[2];
     $Minute = $timeData[1];
 }
+
+
 # else we take the time gived as an arguments
 else {
     my @token = split(/h/,$ARGV[0]);
