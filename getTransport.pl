@@ -22,6 +22,7 @@ my $requestURL = "http://www33.ratp.info/Pivi/piviweb.php?exec=piviweb&cmd=Lexic
 my $resultURL = "http://www33.ratp.info/Pivi/piviweb.php?exec=piviweb&cmd=FeuilleDeRoute&Profil=RATP";
 
 my $DEBUG = "FALSE"; # variable for debugging.
+my $PROFILE_MODE = "SAGEM"; # internal : available options :  SAGEM and OPENWIDE
 
 # Trip Variables :
 my $DEPART = "40+Rue+d%27+Alesia+PARIS-14EME";
